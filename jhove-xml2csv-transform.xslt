@@ -44,6 +44,7 @@ Version 1.01
                      </xsl:if>
              </xsl:for-each><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:samplesPerPixel"/>
+        <xsl:value-of select="jhove:checksums/jhove:checksum type="MD5""/><xsl:text>,<xsl:text>
 
     <xsl:text>&#10;</xsl:text>
 
