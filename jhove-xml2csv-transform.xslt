@@ -44,7 +44,13 @@ Version 1.01
                      </xsl:if>
              </xsl:for-each><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:samplesPerPixel"/>
-        <xsl:value-of select="jhove:checksums/jhove:checksum type="MD5""/><xsl:text>,<xsl:text>
+<!--
+Tried to add the following line to also extract the MD5 checksum. It did not work, so I've commented it out
+   <xsl:value-of select="jhove:checksums/jhove:checksum type="MD5""/><xsl:text>,<xsl:text>
+
+Elizabeth Kata, 2018
+Version 1.02
+-->
 
     <xsl:text>&#10;</xsl:text>
 
