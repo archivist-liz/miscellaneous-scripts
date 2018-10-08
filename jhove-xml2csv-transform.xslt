@@ -30,6 +30,11 @@ Version 1.01
         <xsl:value-of select="descendant::mix:compressionScheme"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:colorSpace"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:iccProfileName"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="descendant::mix:colorSpace"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="descendant::mix:scannerManufacture"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="descendant::mix:scannerModelName"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="descendant::mix:digitalCameraManufacture"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="descendant::mix:digitalCameraModelName"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:samplingFrequencyUnit"/><xsl:text>,</xsl:text>
             <xsl:variable name="xNumerator" select="descendant::mix:xSamplingFrequency/mix:numerator"/>
             <xsl:variable name="xDenominator" select="descendant::mix:xSamplingFrequency/mix:denominator"/>
