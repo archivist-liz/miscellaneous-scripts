@@ -13,7 +13,7 @@ Version 1.01
 <xsl:output method="text" />
 <xsl:template match="jhove:jhove">
 
-<xsl:text>path,size,format,version,module,status,lastModified,imageWidth,imageHeight,byteOrder,compressionScheme,colorSpace,samplingFrequencyUnit,xSamplingFrequency,ySamplingFrequency,bitsPerSampleValue,samplesPerPixel</xsl:text>
+<xsl:text>path,size,format,version,status,lastModified,imageWidth,imageHeight,byteOrder,compressionScheme,colorSpace,iccProfileName,samplingFrequencyUnit,xSamplingFrequency,ySamplingFrequency,bitsPerSampleValue,samplesPerPixel</xsl:text>
 
 <xsl:text>&#10;</xsl:text>
 
@@ -22,7 +22,6 @@ Version 1.01
         <xsl:value-of select="jhove:size"/><xsl:text>,</xsl:text>
         <xsl:value-of select="jhove:format"/><xsl:text>,</xsl:text>
         <xsl:value-of select="jhove:version"/><xsl:text>,</xsl:text>
-        <xsl:value-of select="jhove:sigMatch/jhove:module"/><xsl:text>,</xsl:text>
         <xsl:value-of select="jhove:status"/><xsl:text>,</xsl:text>
         <xsl:value-of select="jhove:lastModified"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:imageWidth"/><xsl:text>,</xsl:text>
@@ -30,6 +29,7 @@ Version 1.01
         <xsl:value-of select="descendant::mix:byteOrder"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:compressionScheme"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:colorSpace"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="descendant::mix:iccProfileName"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:samplingFrequencyUnit"/><xsl:text>,</xsl:text>
             <xsl:variable name="xNumerator" select="descendant::mix:xSamplingFrequency/mix:numerator"/>
             <xsl:variable name="xDenominator" select="descendant::mix:xSamplingFrequency/mix:denominator"/>
