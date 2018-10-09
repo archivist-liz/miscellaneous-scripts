@@ -31,7 +31,6 @@ Version 1.01
         <xsl:value-of select="descendant::mix:compressionScheme"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:colorSpace"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:iccProfileName"/><xsl:text>,</xsl:text>
-        <xsl:value-of select="descendant::mix:colorSpace"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:scannerManufacturer"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:scannerModelName"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:digitalCameraManufacturer"/><xsl:text>,</xsl:text>
