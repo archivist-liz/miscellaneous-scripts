@@ -31,7 +31,6 @@ Version 1.01
         <xsl:value-of select="descendant::mix:compressionScheme"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:colorSpace"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:iccProfileName"/><xsl:text>,</xsl:text>
-        <xsl:value-of select="descendant::mix:colorSpace"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:scannerManufacturer"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:scannerModelName"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:digitalCameraManufacturer"/><xsl:text>,</xsl:text>
@@ -39,12 +38,8 @@ Version 1.01
         <xsl:value-of select="descendant::mix:fNumber"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:exposureTime"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:samplingFrequencyUnit"/><xsl:text>,</xsl:text>
-            <xsl:variable name="xNumerator" select="descendant::mix:xSamplingFrequency/mix:numerator"/>
-            <xsl:variable name="xDenominator" select="descendant::mix:xSamplingFrequency/mix:denominator"/>
-        <xsl:value-of select="round($xNumerator div $xDenominator)"/><xsl:text>,</xsl:text>
-            <xsl:variable name="yNumerator" select="descendant::mix:ySamplingFrequency/mix:numerator"/>
-            <xsl:variable name="yDenominator" select="descendant::mix:ySamplingFrequency/mix:denominator"/>
-        <xsl:value-of select="round($yNumerator div $yDenominator)"/><xsl:text>,</xsl:text>
+	<xsl:value-of select="descendant::mix:xSamplingFrequency/mix:numerator"/><xsl:text>,</xsl:text>
+	<xsl:value-of select="descendant::mix:ySamplingFrequency/mix:numerator"/><xsl:text>,</xsl:text>
              <xsl:for-each select="descendant::mix:bitsPerSampleValue">
                  <xsl:value-of select="."/>
                      <xsl:if test="not(position() = last())">
