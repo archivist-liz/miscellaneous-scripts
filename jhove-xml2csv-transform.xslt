@@ -13,7 +13,7 @@ Version 1.01
 <xsl:output method="text" />
 <xsl:template match="jhove:jhove">
 
-<xsl:text>path,size,format,version,status,lastModified,imageWidth,imageHeight,byteOrder,compressionScheme,colorSpace,iccProfileName,samplingFrequencyUnit,xSamplingFrequency,ySamplingFrequency,bitsPerSampleValue,samplesPerPixel</xsl:text>
+<xsl:text>path,size,format,version,status,lastModified,imageWidth,imageHeight,dateTimeCreated,byteOrder,compressionScheme,colorSpace,iccProfileName,scannerManufacturer,scannerModelName,digitalCameraManufactuere,digitelCameraModelName,fNumber,exposureTime,samplingFrequencyUnit,xSamplingFrequency,ySamplingFrequency,bitsPerSampleValue,samplesPerPixel</xsl:text>
 
 <xsl:text>&#10;</xsl:text>
 
@@ -26,15 +26,18 @@ Version 1.01
         <xsl:value-of select="jhove:lastModified"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:imageWidth"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:imageHeight"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="descendant::mix:dateTimeCreated"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:byteOrder"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:compressionScheme"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:colorSpace"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:iccProfileName"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:colorSpace"/><xsl:text>,</xsl:text>
-        <xsl:value-of select="descendant::mix:scannerManufacture"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="descendant::mix:scannerManufacturer"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:scannerModelName"/><xsl:text>,</xsl:text>
-        <xsl:value-of select="descendant::mix:digitalCameraManufacture"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="descendant::mix:digitalCameraManufacturer"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:digitalCameraModelName"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="descendant::mix:fNumber"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="descendant::mix:exposureTime"/><xsl:text>,</xsl:text>
         <xsl:value-of select="descendant::mix:samplingFrequencyUnit"/><xsl:text>,</xsl:text>
             <xsl:variable name="xNumerator" select="descendant::mix:xSamplingFrequency/mix:numerator"/>
             <xsl:variable name="xDenominator" select="descendant::mix:xSamplingFrequency/mix:denominator"/>
