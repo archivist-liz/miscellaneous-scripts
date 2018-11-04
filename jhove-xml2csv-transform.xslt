@@ -16,7 +16,7 @@ Version 1.02
 <xsl:output method="text" />
     <xsl:template match="jhove:jhove">
 
-        <xsl:text>path,size,format,version,status,lastModified,imageWidth,imageHeight,dateTimeCreated,byteOrder,compressionScheme,colorSpace,iccProfileName,scannerManufacturer,scannerModelName,digitalCameraManufactuere,digitelCameraModelName,fNumber,exposureTime,samplingFrequencyUnit,xSamplingFrequency,ySamplingFrequency,bitsPerSampleValue,samplesPerPixel,md5</xsl:text>
+        <xsl:text>path,size,format,version,status,lastModified,imageWidth,imageHeight,dateTimeCreated,byteOrder,compressionScheme,colorSpace,iccProfileName,scannerManufacturer,scannerModelName,scanningSoftwareName,digitalCameraManufacturer,digitelCameraModelName,fNumber,exifVersion,exposureTime,samplingFrequencyUnit,xSamplingFrequency,ySamplingFrequency,bitsPerSampleValue,samplesPerPixel,md5</xsl:text>
 
         <xsl:text>&#10;</xsl:text>
         <xsl:for-each select="jhove:repInfo" >
@@ -39,6 +39,7 @@ Version 1.02
             <xsl:value-of select="descendant::mix:digitalCameraManufacturer"/><xsl:text>,</xsl:text>
             <xsl:value-of select="descendant::mix:digitalCameraModelName"/><xsl:text>,</xsl:text>
             <xsl:value-of select="descendant::mix:fNumber"/><xsl:text>,</xsl:text>
+            <xsl:value-of select="descendant::mix:exifVersion"/><xsl:text>,</xsl:text>
             <xsl:value-of select="descendant::mix:exposureTime"/><xsl:text>,</xsl:text>
             <xsl:value-of select="descendant::mix:samplingFrequencyUnit"/><xsl:text>,</xsl:text>
             <xsl:value-of select="descendant::mix:xSamplingFrequency/mix:numerator"/><xsl:text>,</xsl:text>
