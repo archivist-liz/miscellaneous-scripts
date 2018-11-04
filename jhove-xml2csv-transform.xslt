@@ -35,6 +35,7 @@ Version 1.02
             <xsl:value-of select="descendant::mix:iccProfileName"/><xsl:text>,</xsl:text>
             <xsl:value-of select="descendant::mix:scannerManufacturer"/><xsl:text>,</xsl:text>
             <xsl:value-of select="descendant::mix:scannerModelName"/><xsl:text>,</xsl:text>
+            <xsl:value-of select="descendant::mix:scanningSoftwareName"/><xsl:text>,</xsl:text>
             <xsl:value-of select="descendant::mix:digitalCameraManufacturer"/><xsl:text>,</xsl:text>
             <xsl:value-of select="descendant::mix:digitalCameraModelName"/><xsl:text>,</xsl:text>
             <xsl:value-of select="descendant::mix:fNumber"/><xsl:text>,</xsl:text>
