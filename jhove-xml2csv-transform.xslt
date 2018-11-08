@@ -21,12 +21,12 @@ Version 1.02
 		<xsl:variable name="var2" select="@release">
 		</xsl:variable>
 
-        <xsl:text>fileFormatRegistryName,path,size,format,version,status,lastModified,imageWidth,imageHeight,dateTimeCreated,byteOrder,compressionScheme,colorSpace,iccProfileName,scannerManufacturer,scannerModelName,scanningSoftwareName,digitalCameraManufacturer,digitelCameraModelName,fNumber,exifVersion,exposureTime,samplingFrequencyUnit,xSamplingFrequency,ySamplingFrequency,bitsPerSampleValue,samplesPerPixel,messageDigest,messageDigestAlgorithm</xsl:text>
+        <xsl:text>path,fileFormatRegistryName,size,format,version,status,lastModified,imageWidth,imageHeight,dateTimeCreated,byteOrder,compressionScheme,colorSpace,iccProfileName,scannerManufacturer,scannerModelName,scanningSoftwareName,digitalCameraManufacturer,digitelCameraModelName,fNumber,exifVersion,exposureTime,samplingFrequencyUnit,xSamplingFrequency,ySamplingFrequency,bitsPerSampleValue,samplesPerPixel,messageDigest,messageDigestAlgorithm</xsl:text>
 
         <xsl:text>&#10;</xsl:text>
         <xsl:for-each select="jhove:repInfo" >
-            <xsl:value-of select="$var1"/><xsl:text>,</xsl:text>
-	    <xsl:value-of select="@uri"/><xsl:text>,</xsl:text>
+            <xsl:value-of select="@uri"/><xsl:text>,</xsl:text>
+	    <xsl:value-of select="$var1"/><xsl:text>,</xsl:text>
             <xsl:value-of select="jhove:size"/><xsl:text>,</xsl:text>
             <xsl:value-of select="jhove:format"/><xsl:text>,</xsl:text>
             <xsl:value-of select="jhove:version"/><xsl:text>,</xsl:text>
