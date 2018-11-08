@@ -15,11 +15,18 @@ Version 1.02
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:jhove="http://hul.harvard.edu/ois/xml/ns/jhove" xmlns:mix="http://www.loc.gov/mix/v20">
 <xsl:output method="text" />
     <xsl:template match="jhove:jhove">
+        
+        <xsl:variable name="var1" select="@name">
+		</xsl:variable>
+		<xsl:variable name="var2" select="@release">
+		</xsl:variable>
 
-        <xsl:text>path,size,format,version,status,lastModified,imageWidth,imageHeight,dateTimeCreated,byteOrder,compressionScheme,colorSpace,iccProfileName,scannerManufacturer,scannerModelName,scanningSoftwareName,digitalCameraManufacturer,digitelCameraModelName,fNumber,exifVersion,exposureTime,samplingFrequencyUnit,xSamplingFrequency,ySamplingFrequency,bitsPerSampleValue,samplesPerPixel,md5</xsl:text>
+        <xsl:text>fileFormatRegistryName,fileFormatRegistryVersion,path,size,format,version,status,lastModified,imageWidth,imageHeight,dateTimeCreated,byteOrder,compressionScheme,colorSpace,iccProfileName,scannerManufacturer,scannerModelName,scanningSoftwareName,digitalCameraManufacturer,digitelCameraModelName,fNumber,exifVersion,exposureTime,samplingFrequencyUnit,xSamplingFrequency,ySamplingFrequency,bitsPerSampleValue,samplesPerPixel,messageDigest,messageDigestAlgorithm</xsl:text>
 
         <xsl:text>&#10;</xsl:text>
         <xsl:for-each select="jhove:repInfo" >
+            <xsl:value-of select="$var1"/><xsl:text>,</xsl:text>
+			<xsl:value-of select="$var2"/><xsl:text>,</xsl:text>
             <xsl:value-of select="@uri"/><xsl:text>,</xsl:text>
             <xsl:value-of select="jhove:size"/><xsl:text>,</xsl:text>
             <xsl:value-of select="jhove:format"/><xsl:text>,</xsl:text>
@@ -52,6 +59,7 @@ Version 1.02
                 </xsl:for-each><xsl:text>,</xsl:text>
             <xsl:value-of select="descendant::mix:samplesPerPixel"/><xsl:text>,</xsl:text>
             <xsl:value-of select="jhove:checksums/jhove:checksum[@type = 'MD5']"/><xsl:text>,</xsl:text>
+            <xsl:text>md5,</xsl:text>
             <xsl:text>&#10;</xsl:text>
         </xsl:for-each>
     </xsl:template>
