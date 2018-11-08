@@ -26,7 +26,7 @@ Version 1.02
         <xsl:text>&#10;</xsl:text>
         <xsl:for-each select="jhove:repInfo" >
             <xsl:value-of select="$var1"/><xsl:text>,</xsl:text>
-			<xsl:value-of select="$var2"/><xsl:text>,</xsl:text>
+	    <xsl:value-of select="$var2"/><xsl:text>,</xsl:text>
             <xsl:value-of select="@uri"/><xsl:text>,</xsl:text>
             <xsl:value-of select="jhove:size"/><xsl:text>,</xsl:text>
             <xsl:value-of select="jhove:format"/><xsl:text>,</xsl:text>
