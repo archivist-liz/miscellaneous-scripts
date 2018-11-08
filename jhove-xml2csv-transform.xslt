@@ -23,7 +23,7 @@ Version 1.02
 	    <xsl:variable name="var3" select="jhove:date">
 		</xsl:variable>
 
-        <xsl:text>fileFormatRegistryName,fileFormatRegistryVersion,path,size,format,version,status,lastModified,imageWidth,imageHeight,dateTimeCreated,byteOrder,compressionScheme,colorSpace,iccProfileName,scannerManufacturer,scannerModelName,scanningSoftwareName,digitalCameraManufacturer,digitelCameraModelName,fNumber,exifVersion,exposureTime,samplingFrequencyUnit,xSamplingFrequency,ySamplingFrequency,bitsPerSampleValue,samplesPerPixel,messageDigest,messageDigestAlgorithm</xsl:text>
+        <xsl:text>fileFormatRegistryName,fileFormatRegistryVersion,fileFormatRegistryDatePerformed,path,size,format,version,status,lastModified,imageWidth,imageHeight,dateTimeCreated,byteOrder,compressionScheme,colorSpace,iccProfileName,scannerManufacturer,scannerModelName,scanningSoftwareName,digitalCameraManufacturer,digitelCameraModelName,fNumber,exifVersion,exposureTime,samplingFrequencyUnit,xSamplingFrequency,ySamplingFrequency,bitsPerSampleValue,samplesPerPixel,messageDigest,messageDigestAlgorithm</xsl:text>
 
         <xsl:text>&#10;</xsl:text>
         <xsl:for-each select="jhove:repInfo" >
