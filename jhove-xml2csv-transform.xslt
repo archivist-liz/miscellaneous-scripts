@@ -23,7 +23,7 @@ Version 1.02
 	    <xsl:variable name="var3" select="jhove:date">
 		</xsl:variable>
 
-        <xsl:text>fileFormatRegistryName,fileFormatRegistryVersion,fileFormatRegistryDatePerformed,path,size,format,version,status,lastModified,imageWidth,imageHeight,dateTimeCreated,byteOrder,compressionScheme,colorSpace,iccProfileName,scannerManufacturer,scannerModelName,scanningSoftwareName,digitalCameraManufacturer,digitelCameraModelName,fNumber,exifVersion,exposureTime,samplingFrequencyUnit,xSamplingFrequency,ySamplingFrequency,bitsPerSampleValue,samplesPerPixel,messageDigest,messageDigestAlgorithm</xsl:text>
+        <xsl:text>fileFormatRegistryName,fileFormatRegistryVersion,fileFormatRegistryDatePerformed,path,size,format,version,status,lastModified,imageWidth,imageHeight,dateTimeCreated,byteOrder,compressionScheme,colorSpace,iccProfileName,scannerManufacturer,scannerModelName,scanningSoftwareName,digitalCameraManufacturer,digitelCameraModelName,fNumber,exifVersion,exposureTime,samplingFrequencyUnit,xSamplingFrequency,ySamplingFrequency,bitsPerSampleValue,samplesPerPixel,messageDigest,messageDigestAlgorithm,bitsPerSampleUnit</xsl:text>
 
         <xsl:text>&#10;</xsl:text>
         <xsl:for-each select="jhove:repInfo" >
@@ -63,6 +63,7 @@ Version 1.02
             <xsl:value-of select="descendant::mix:samplesPerPixel"/><xsl:text>,</xsl:text>
             <xsl:value-of select="jhove:checksums/jhove:checksum[@type = 'MD5']"/><xsl:text>,</xsl:text>
             <xsl:text>md5,</xsl:text>
+	    <xsl:for-each select="descendant::mix:bitsPerSampleUnit"/><xsl:text>,</xsl:text>
             <xsl:text>&#10;</xsl:text>
         </xsl:for-each>
     </xsl:template>
