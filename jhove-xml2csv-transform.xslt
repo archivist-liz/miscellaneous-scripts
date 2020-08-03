@@ -63,7 +63,7 @@ Version 1.02
             <xsl:value-of select="descendant::mix:samplesPerPixel"/><xsl:text>,</xsl:text>
             <xsl:value-of select="jhove:checksums/jhove:checksum[@type = 'MD5']"/><xsl:text>,</xsl:text>
             <xsl:text>md5,</xsl:text>
-	    <xsl:vakue-of select="descendant::mix:bitsPerSampleUnit"/><xsl:text>,</xsl:text>
+	    <xsl:value-of select="descendant::mix:bitsPerSampleUnit"/><xsl:text>,</xsl:text>
             <xsl:text>&#10;</xsl:text>
         </xsl:for-each>
     </xsl:template>
